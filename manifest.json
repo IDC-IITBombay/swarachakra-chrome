@@ -1,15 +1,21 @@
 {
   "name": "Swarachakra for Chrome",
   "version" : "1.0.1",
-  "description" : "This gives me a Swarachakra Malayalam Keyboard for Chrome",
-  "background" : {
-    "scripts": [
-      "js/config/background.js"
-    ]
-  },
+  "description" : "This gives me a Swarachakra Kannada Keyboard for Chrome",
   "icons" : {
     "128" : "images/swarachakra.png"
   },
+  "background": {
+    "scripts" : ["js/config/background.js"]
+  },
+  "browser_action" : {
+    "default_title" : "Swarachakra for Chrome",
+    "default_icon" : "images/swarachakra.png"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
   "content_scripts" : [
     {
       "matches" : [
@@ -32,5 +38,6 @@
       "all_frames" : false
     }
   ],
+  "options_page" : "templates/options.html",
   "manifest_version": 2
 }
