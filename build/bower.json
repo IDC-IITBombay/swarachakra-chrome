@@ -1,0 +1,12 @@
+{
+  "name": "Swarachakra for Chrome",
+  "description": "This gives me a Swarachakra Malayalam Keyboard for Chrome",
+  "version": "1.0.1",
+  "dependencies": {
+    "jquery": "",
+    "angular": "",
+    "restangular": "",
+    "angular-animate": "",
+    "fontawesome": ""
+  }
+}

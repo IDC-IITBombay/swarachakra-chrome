@@ -1,0 +1,23 @@
+{
+	"name": "Swarachakra for Chrome",
+	"description": "This gives me a Swarachakra Malayalam Keyboard for Chrome",
+	"version": "1.0.1",
+	"private": false,
+	"homepage": "https://github.com/swarachakra-chrome",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com/swarachakra-chrome.git"
+	},
+	"bugs": "https://github.com/swarachakra-chrome/issues",
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "*",
+		"grunt-cli": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-wrap": "*",
+		"bower": "*",
+	},
+	"engine": "node >= 0.8"
+}
