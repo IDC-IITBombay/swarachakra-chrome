@@ -1,0 +1,230 @@
+<div
+  ng-controller="KeyboardController"
+  id="keyboard"
+  ng-init="frame2 = false; frame1 = true">
+<!-- The Keyboard Container -->
+  <div id="keyboardcontainer">
+    <div class="header" ng-click="toggledisplayofkeyboard = !toggledisplayofkeyboard">
+      <strong class="languagename">Language: <span>{{ currentlanguagename }}</span></strong>
+      <div class="toggler">
+        <span>-</span>
+      </div>
+    </div>
+    <div ng-show="toggledisplayofkeyboard">
+      <!-- First Column should be here. 1x5-->
+      <div class="firstcolumn frame1">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr ng-repeat="row in firsttablekeys">
+              <td ng-click="sharetext(row.unicode)" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}">
+                <span>{{ row.unicode }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- First 5x5 table for the Swarachakra keys. 5x5-->
+      <div class="maintable1 frame1" ng-show="frame1">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr ng-repeat="data in firstmaintablekeys">
+              <td ng-repeat="row in data" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Second 5x5 table for the Swarachakra keys. 5x5-->
+      <div class="maintable2 frame1" ng-show="frame1">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr ng-repeat="data2 in secondmaintablekeys track by $index">
+              <td ng-repeat="row2 in data2" data-keycode="{{ row2.keycode }}" data-chakra="{{ row2.chakra }}" ng-mousedown="displaychakra(row2.keycode, row2.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row2.unicode)">
+                <span ng-bind-html="row2.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Third 5x5 table for the Swarachakra keys. 5x5, opens on shift selection-->
+      <div class="maintable1 frame2" ng-show="frame2">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td ng-repeat="row in onscreen[8]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="row in onscreen[8]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="row in onscreen[9]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="row in onscreen[10]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}"ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Third 5x5 table for the Swarachakra keys. 5x5, opens on shift selection-->
+      <div class="maintable2 frame2" ng-show="frame2">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td ng-repeat="row in onscreen[11]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="row in onscreen[12]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="row in onscreen[13]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="row in onscreen[14]" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}" ng-mousedown="displaychakra(row.keycode, row.unicode, $event)" ng-mouseup="hidechakra()" ng-click="sharetext(row.unicode)">
+                <span ng-bind-html="row.unicode | unsafeFilter"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Last Column should be here. 1x5 -->
+      <div class="lastcolumn frame1">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td ng-click="delete()" data-keycode="54" data-chakra="0">
+                <span><i class="fa fa-remove"></i></span>
+              </td>
+            </tr>
+            <tr ng-repeat="row in lasttablekeys">
+              <td ng-click="sharetext(row.unicode)" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}">
+                <span>{{ row.unicode }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Last row should be here.5x1 -->
+      <div class="lastrow">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td ng-click="frame1 = !frame1; frame2 = !frame2" data-keycode="55" data-chakra="55">
+                <span>
+                  <i class="fa fa-arrow-up"></i>
+                 </span>
+              </td>
+              <td ng-click="languageswitcher != languageswitcher">
+                <span>
+                  <strong>LS</strong> <!-- Need Better Icons for switching Languages -->
+                </span>
+              </td>
+              <td data-keycode="{{ lastrowleftkeys.keycode }}" data-chakra="{{ lastrowleftkeys.chakra }}" ng-click="sharetext(lastrowleftkeys.unicode)">
+                <span>{{ lastrowleftkeys.unicode }}</span>
+              </td>
+              <td id="spacebar" ng-click="sharetext(' ')" data-keycode="56" data-chakra="0">
+                <span></span>
+              </td>
+              <td ng-repeat="row in lastrowrightkeys" ng-click="sharetext(row.unicode)" data-keycode="{{ row.keycode }}" data-chakra="{{ row.chakra }}">
+                <span>{{ row.unicode }}</span>
+              </td>
+              <td class="enterkey" data-keycode="57" data-chakra="57">
+                <span>
+                  <img src="/assets/enter.png" alt="En" />
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div ng-show="languageswitcher">
+      <ul>
+        <li ng-repeat="onelanguage in languagelist">
+          <input type="radio" />
+          <span>{{ onelanguage }}</span>
+        </li>
+      </ul>
+    </div>
+    <!--<div class="options">
+      <strong>Available Languages</strong>
+      <ul>
+        <li>
+          <input type="radio" name="languagetype" value="male">
+          <label for="languagetype">Hindi</label>
+        </li>
+        <li>
+          <input type="radio" name="languagetype" value="male">
+          <label for="languagetype">Telagu</label>
+        </li>
+        <li>
+          <input type="radio" name="languagetype" value="male">
+          <label for="languagetype">Malayalam</label>
+        </li>
+      </ul>
+      <button class="btn-primary btn languageswitch" ng-click="switch(language.id)">
+        <i class="fa fa-refresh"></i><span>Refresh</span>
+      </button>
+    </div>
+    -->
+  </div>
+  <div id="chakra" ng-mouseup="hidechakra()">
+      <ul>
+        <li class="first">
+          <span>a</span>
+        </li>
+        <li class="second">
+          <span>b</span>
+        </li>
+        <li class="third">
+          <span>c</span>
+        </li>
+        <li class="fourth">
+          <span>d</span>
+        </li>
+        <li class="fifth">
+          <span>e</span>
+        </li>
+        <li class="sixth">
+          <span>f</span>
+        </li>
+        <li class="seventh">
+          <span>g</span>
+        </li>
+        <li class="eigth">
+          <span>h</span>
+        </li>
+        <li class="ninth">
+          <span>i</span>
+        </li>
+        <li class="tenth">
+          <span>j</span>
+        </li>
+      </ul>
+      <div id="innerchakra">
+        <h6 ng-bind-html="currentkey | unsafeFilter"></h6>
+      </div>
+    </div>
+</div>
