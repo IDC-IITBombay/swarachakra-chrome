@@ -38,6 +38,10 @@
       "all_frames" : false
     }
   ],
+  "web_accessible_resources": [
+    "templates/*",
+    "css/keyboard.css"
+  ],
   "options_page" : "templates/options.html",
   "manifest_version": 2
 }

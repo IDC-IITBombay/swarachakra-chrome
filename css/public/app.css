@@ -1,0 +1,192 @@
+#signupform form label {
+  text-align: right;
+  float: left;
+}
+#signupform form input[type="text"], #signupform form input[type="password"], #signupform form input[type="email"] {
+  float: right;
+}
+
+#textarea textarea {
+  width: 100%;
+  height: 50%;
+  min-height: 200px;
+  top: 50px;
+  border: 0;
+  outline: 0;
+  resize: none;
+  border-bottom: 1px dashed #ccc;
+}
+
+#keyboardcontainer {
+  max-width: 564px;
+  min-width: 564px;
+  max-height: 600px;
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+  right: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #eee;
+}
+#keyboardcontainer .header {
+  float: left;
+  width: 100%;
+  height: 36px;
+  vertical-align: middle;
+  padding: 8px;
+  margin-bottom: 5px;
+  background: #333;
+  color: #fefefe;
+  cursor: pointer;
+}
+#keyboardcontainer .header .toggler {
+  float: right;
+}
+#keyboardcontainer .header:hover {
+  background: #555;
+}
+#keyboardcontainer .options {
+  float: left;
+}
+#keyboardcontainer .options ul {
+  list-style: none outside none;
+}
+#keyboardcontainer .options ul li label {
+  font-weight: normal;
+}
+#keyboardcontainer .options .languageswitch span {
+  margin-left: 5px;
+}
+#keyboardcontainer .firstcolumn {
+  margin-left: 2px;
+}
+#keyboardcontainer .lastcolumn, #keyboardcontainer .firstcolumn {
+  width: 48px;
+}
+#keyboardcontainer .maintable1, #keyboardcontainer .maintable2 {
+  width: 232px;
+}
+#keyboardcontainer .maintable1, #keyboardcontainer .maintable2, #keyboardcontainer .lastcolumn, #keyboardcontainer .firstcolumn {
+  margin-left: 1px;
+}
+#keyboardcontainer .maintable1 table, #keyboardcontainer .maintable2 table, #keyboardcontainer .lastcolumn table, #keyboardcontainer .firstcolumn table {
+  border-right: 1px solid #111;
+}
+#keyboardcontainer .maintable1, #keyboardcontainer .maintable2, #keyboardcontainer .lastcolumn, #keyboardcontainer .firstcolumn, #keyboardcontainer .lastrow {
+  float: left;
+}
+#keyboardcontainer .maintable1 table, #keyboardcontainer .maintable2 table, #keyboardcontainer .lastcolumn table, #keyboardcontainer .firstcolumn table, #keyboardcontainer .lastrow table {
+  margin: 0 auto;
+  text-align: center;
+}
+#keyboardcontainer .maintable1 table tbody tr td, #keyboardcontainer .maintable2 table tbody tr td, #keyboardcontainer .lastcolumn table tbody tr td, #keyboardcontainer .firstcolumn table tbody tr td, #keyboardcontainer .lastrow table tbody tr td {
+  width: 46px !important;
+  height: 50px !important;
+  padding: 15px;
+  text-align: center;
+}
+#keyboardcontainer .maintable1 table tbody tr td:hover, #keyboardcontainer .maintable2 table tbody tr td:hover, #keyboardcontainer .lastcolumn table tbody tr td:hover, #keyboardcontainer .firstcolumn table tbody tr td:hover, #keyboardcontainer .lastrow table tbody tr td:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+#keyboardcontainer .maintable1 table tbody tr td span, #keyboardcontainer .maintable2 table tbody tr td span, #keyboardcontainer .lastcolumn table tbody tr td span, #keyboardcontainer .firstcolumn table tbody tr td span, #keyboardcontainer .lastrow table tbody tr td span {
+  z-index: 10;
+}
+#keyboardcontainer .maintable1 table tbody tr:nth-child(2n+1), #keyboardcontainer .maintable2 table tbody tr:nth-child(2n+1), #keyboardcontainer .lastcolumn table tbody tr:nth-child(2n+1), #keyboardcontainer .firstcolumn table tbody tr:nth-child(2n+1), #keyboardcontainer .lastrow table tbody tr:nth-child(2n+1) {
+  background: #ddd;
+}
+#keyboardcontainer .maintable1 table tbody tr:nth-child(2n), #keyboardcontainer .maintable2 table tbody tr:nth-child(2n), #keyboardcontainer .lastcolumn table tbody tr:nth-child(2n), #keyboardcontainer .firstcolumn table tbody tr:nth-child(2n), #keyboardcontainer .lastrow table tbody tr:nth-child(2n) {
+  background: #eee;
+}
+#keyboardcontainer .lastrow {
+  margin-top: -5px;
+  float: left;
+  margin-left: 1px;
+  border-right: 1px solid #111;
+}
+#keyboardcontainer .lastrow #spacebar {
+  width: 240px !important;
+}
+#keyboardcontainer table {
+  display: inline-block;
+}
+#keyboardcontainer .enterkey span img {
+  width: 18px;
+  height: 18px;
+}
+
+#chakra {
+  z-index: 8;
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  background: #666;
+  color: #efefef;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#chakra #innerchakra {
+  text-align: center;
+  left: 38px;
+  top: 38px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #eee;
+  z-index: 5;
+}
+#chakra #innerchakra h6 {
+  color: #333;
+  margin: 16px;
+  font-weight: 700;
+}
+#chakra ul {
+  list-style: none outside none;
+}
+#chakra ul li {
+  position: absolute;
+}
+#chakra ul li:first-child {
+  margin-top: 8px;
+  margin-left: 20px;
+}
+#chakra ul li:nth-child(2) {
+  top: 15px;
+  margin-left: 45px;
+}
+#chakra ul li:nth-child(3) {
+  top: 35px;
+  margin-left: 60px;
+}
+#chakra ul li:nth-child(4) {
+  top: 65px;
+  margin-left: 60px;
+}
+#chakra ul li:nth-child(5) {
+  top: 85px;
+  margin-left: 48px;
+}
+#chakra ul li:nth-child(6) {
+  top: 100px;
+  margin-left: 20px;
+}
+#chakra ul li:nth-child(7) {
+  top: 85px;
+  margin-left: -8px;
+}
+#chakra ul li:nth-child(8) {
+  top: 65px;
+  margin-left: -25px;
+}
+#chakra ul li:nth-child(9) {
+  top: 35px;
+  margin-left: -25px;
+}
+#chakra ul li:nth-child(10) {
+  top: 15px;
+  margin-left: -5px;
+}
+#chakra ul li span:active {
+  color: #333;
+}
