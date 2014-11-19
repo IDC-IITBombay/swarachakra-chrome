@@ -27,6 +27,7 @@
         "3rdparty/angular/angular.js",
         "3rdparty/lodash/dist/lodash.js",
         "3rdparty/angular-animate/angular-animate.js",
+        "3rdparty/angular-route/angular-route.js",
         "3rdparty/restangular/dist/restangular.js",
         "js/config/contentscript.js"
       ],

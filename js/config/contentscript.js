@@ -17,12 +17,13 @@ $(document).ready(function() {
       $(this).addClass('swarachakrainputenabled'); // Adds the swarachakra Class on focus.
       $('body').append("<div class='swarachakrasurrownder'></div>");
       $('.swarachakrasurrownder').load(chrome.extension.getURL("templates/js/keyboard.html"));
+      angular.bootstrap('.swarachakrasurrownder', ['Swarachakra']);
     }
   }).focusout(function() {
     if ($(this).hasClass('swarachakrainputenabled')) {
       $(this).removeClass('swarachakrainputenabled'); // Removes the swarachakra class when out of focus.
     }
-    $('body').find('.swarachakrasurrownder').remove(); // TODO: Clicking on the keyboard also removes the keyboard, fix.
+    //$('body').find('.swarachakrasurrownder').remove(); // TODO: Clicking on the keyboard also removes the keyboard, fix.
   });
 });
 
@@ -30,8 +31,7 @@ $(document).ready(function() {
 
 var app;
 
-app = angular.module("Swarachakra", ["ngAnimate", "restangular", "ngRoute", "ngSanitize", "ngTouch"]);
-console.log(app);
+app = angular.module("Swarachakra", ["ngAnimate", "restangular", "ngRoute"]);
 app.directive("swarachakraTimeoutChange", [
   "$timeout", function($timeout) {
     return {
