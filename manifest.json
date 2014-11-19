@@ -40,7 +40,8 @@
   ],
   "web_accessible_resources": [
     "templates/*",
-    "css/keyboard.css"
+    "css/keyboard.css",
+    "images/*"
   ],
   "options_page" : "templates/options.html",
   "manifest_version": 2

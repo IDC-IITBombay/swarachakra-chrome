@@ -21,7 +21,7 @@
   max-width: 564px;
   min-width: 564px;
   max-height: 600px;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 100px;
   right: 100px;
