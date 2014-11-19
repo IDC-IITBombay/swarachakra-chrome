@@ -16,8 +16,10 @@ $(document).ready(function() {
     if (!$(this).hasClass('swarachakrainputenabled')) {
       $(this).addClass('swarachakrainputenabled'); // Adds the swarachakra Class on focus.
       $('body').append("<div class='swarachakrasurrownder'></div>");
-      $('.swarachakrasurrownder').load(chrome.extension.getURL("templates/js/keyboard.html"));
-      angular.bootstrap('.swarachakrasurrownder', ['Swarachakra']);
+      $('.swarachakrasurrownder').load(chrome.extension.getURL("templates/js/keyboard.html"), function () {
+        angular.bootstrap('.swarachakrasurrownder', ['Swarachakra']);
+      });
+
     }
   }).focusout(function() {
     if ($(this).hasClass('swarachakrainputenabled')) {
