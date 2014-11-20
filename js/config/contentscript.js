@@ -62,24 +62,19 @@ app.filter("unsafeFilter", function($sce) {
 app.controller("AppController", [
   "$scope", "$http", "LanguageModel", function($scope, $http, LanguageModel) {
     var languageResource;
-    $scope.languages = LanguageModel.getAll();
-    $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json', function (languageobject) {
-      LanguageModel.addAll();
-      console.log(langaugeobject);
-    });
   }
 ]);
 
 app.controller("KeyboardController", [
   "$scope", "$http", "LanguageModel", "KeyboardModel", "$sce", function($scope, $http, LanguageModel, KeyboardModel, $sce) {
     var languageResource;
-    $scope.languages = LanguageModel.getAll();
     languageResource = $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json');
     angular.element("#chakra").css("display", "none");
     languageResource.success(function(languageobject) {
-      console.log(languageobject);
-      /*LanguageModel.addAll(languageobject);
-      KeyboardModel.addlanguage(languageobject);
+      LanguageModel.addAll(languageobject);
+      $scope.currentlanguage = languageobject;
+      $scope.currentlanguagename = $scope.currentlanguage.name;
+      KeyboardModel.addlanguage($scope.currentlanguage);
       $scope.onscreen = KeyboardModel.getallkeys();
       $scope.firstmaintablekeys = KeyboardModel.maintablelayout1();
       $scope.secondmaintablekeys = KeyboardModel.maintablelayout2();
@@ -89,10 +84,6 @@ app.controller("KeyboardController", [
       $scope.lasttablekeys = KeyboardModel.lasttablelayout();
       $scope.lastrowleftkeys = KeyboardModel.lasttableleftlayout();
       $scope.lastrowrightkeys = KeyboardModel.lasttablerightlayout();
-      console.log($scope.lastrowrightkeys);
-      $scope.currentlanguage = $scope.languages[0];
-      $scope.currentlanguagename = $scope.currentlanguage.name;
-      */
     });
     $scope.displaychakra = function(keycode, unicode, event) {
       angular.element("#chakra").css("left", event.screenX - 70).css("top", event.screenY - 180).css("display", "block");
@@ -134,7 +125,8 @@ app.factory("KeyboardModel", function() {
     },
     getallkeys: function() {
       var currentlanguage, div, grouped, i, mod, totalrows;
-      currentlanguage = this.languageobject[1];
+      currentlanguage = this.languageobject;
+      console.log(currentlanguage);
       totalrows = currentlanguage.csv.length;
       grouped = [];
       i = 0;
@@ -224,6 +216,7 @@ app.factory("LanguageModel", function() {
   LanguageModel.prototype = {
     add: function(language) {
       this.languages.push(language);
+      console.log(this.languages);
     },
     addAll: function(languages) {
       var i;
