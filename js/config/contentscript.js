@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 var app;
 
-app = angular.module("Swarachakra", ["ngAnimate", "restangular", "ngRoute"]);
+app = angular.module("Swarachakra", ["ngAnimate", "ngRoute"]);
 app.directive("swarachakraTimeoutChange", [
   "$timeout", function($timeout) {
     return {
@@ -60,48 +60,25 @@ app.filter("unsafeFilter", function($sce) {
 });
 
 app.controller("AppController", [
-  "$scope", "Restangular", "LanguageModel", function($scope, Restangular, LanguageModel) {
+  "$scope", "$http", "LanguageModel", function($scope, $http, LanguageModel) {
     var languageResource;
     $scope.languages = LanguageModel.getAll();
-    languageResource = Restangular.one("languages");
-  }
-]);
-
-app.controller("DashboardController", [
-  "$scope", "Restangular", "LanguageModel", function($scope, Restangular, LanguageModel) {
-    $scope.langauges = LanguageModel.getAll();
-    $scope.remove = function(id) {
-      var language;
-      language = LanguageModel.get(id);
-      language.remove().then(function() {
-        LanguageModel.remove(id);
-        $scope.langauges = LanguageModel.getAll();
-      });
-    };
-    return $scope.update = function(id) {
-      var currentload, language;
-      $scope.currentload = true;
-      currentload = $scope.currentload;
-      language = LanguageModel.get(id);
-      language.patch({
-        enabled: currentload
-      }).then(function(languageobject) {
-        LanguageModel.update(languageobject);
-        $scope.langauges = LanguageModel.getAll();
-        $scope.currentload = false;
-      });
-    };
+    $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json', function (languageobject) {
+      LanguageModel.addAll();
+      console.log(langaugeobject);
+    });
   }
 ]);
 
 app.controller("KeyboardController", [
-  "$scope", "Restangular", "LanguageModel", "KeyboardModel", "$sce", function($scope, Restangular, LanguageModel, KeyboardModel, $sce) {
+  "$scope", "$http", "LanguageModel", "KeyboardModel", "$sce", function($scope, $http, LanguageModel, KeyboardModel, $sce) {
     var languageResource;
     $scope.languages = LanguageModel.getAll();
-    languageResource = Restangular.one("languages");
+    languageResource = $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json');
     angular.element("#chakra").css("display", "none");
-    languageResource.getList("all").then(function(languageobject) {
-      LanguageModel.addAll(languageobject);
+    languageResource.success(function(languageobject) {
+      console.log(languageobject);
+      /*LanguageModel.addAll(languageobject);
       KeyboardModel.addlanguage(languageobject);
       $scope.onscreen = KeyboardModel.getallkeys();
       $scope.firstmaintablekeys = KeyboardModel.maintablelayout1();
@@ -115,6 +92,7 @@ app.controller("KeyboardController", [
       console.log($scope.lastrowrightkeys);
       $scope.currentlanguage = $scope.languages[0];
       $scope.currentlanguagename = $scope.currentlanguage.name;
+      */
     });
     $scope.displaychakra = function(keycode, unicode, event) {
       angular.element("#chakra").css("left", event.screenX - 70).css("top", event.screenY - 180).css("display", "block");
@@ -132,7 +110,7 @@ app.controller("KeyboardController", [
 ]);
 
 app.controller("TextareaController", [
-  "$scope", "Restangular", "LanguageModel", "SaveModel", function($scope, Restangular, LanguageModel, SaveModel) {
+  "$scope", "LanguageModel", "SaveModel", function($scope, LanguageModel, SaveModel) {
     $scope.languages = LanguageModel.getAll();
     $scope.save = function() {
       var content;
