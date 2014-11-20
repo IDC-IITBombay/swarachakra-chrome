@@ -84,6 +84,8 @@ app.controller("KeyboardController", [
       $scope.lasttablekeys = KeyboardModel.lasttablelayout();
       $scope.lastrowleftkeys = KeyboardModel.lasttableleftlayout();
       $scope.lastrowrightkeys = KeyboardModel.lasttablerightlayout();
+      $scope.defaultchakrakeys = KeyboardModel.swarachakrakeys();
+      console.log($scope.defaultchakrakeys);
     });
     $scope.displaychakra = function(keycode, unicode, event) {
       angular.element("#chakra").css("left", event.screenX - 70).css("top", event.screenY - 180).css("display", "block");
@@ -100,17 +102,6 @@ app.controller("KeyboardController", [
   }
 ]);
 
-app.controller("TextareaController", [
-  "$scope", "LanguageModel", "SaveModel", function($scope, LanguageModel, SaveModel) {
-    $scope.languages = LanguageModel.getAll();
-    $scope.save = function() {
-      var content;
-      content = $scope.content;
-      SaveModel.add(content);
-    };
-  }
-]);
-
 app.factory("KeyboardModel", function() {
   var KeyboardModel;
   KeyboardModel = function() {
@@ -118,6 +109,7 @@ app.factory("KeyboardModel", function() {
     this.key = [];
     this.keyid = {};
     this.languageobject = {};
+    this.chakrakeys = [];
   };
   KeyboardModel.prototype = {
     addlanguage: function(languageobject) {
@@ -126,7 +118,7 @@ app.factory("KeyboardModel", function() {
     getallkeys: function() {
       var currentlanguage, div, grouped, i, mod, totalrows;
       currentlanguage = this.languageobject;
-      console.log(currentlanguage);
+      this.chakrakeys = currentlanguage.defaultchakra;
       totalrows = currentlanguage.csv.length;
       grouped = [];
       i = 0;
@@ -200,7 +192,10 @@ app.factory("KeyboardModel", function() {
       }
       return table;
     },
-    swarachakrakeys: function() {}
+    swarachakrakeys: function() {
+      var chakrakeys = this.chakrakeys.split(" ");
+      return chakrakeys;
+    }
   };
   return new KeyboardModel();
 });
@@ -216,7 +211,6 @@ app.factory("LanguageModel", function() {
   LanguageModel.prototype = {
     add: function(language) {
       this.languages.push(language);
-      console.log(this.languages);
     },
     addAll: function(languages) {
       var i;
