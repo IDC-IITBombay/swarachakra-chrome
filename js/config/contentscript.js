@@ -85,7 +85,6 @@ app.controller("KeyboardController", [
       $scope.lastrowleftkeys = KeyboardModel.lasttableleftlayout();
       $scope.lastrowrightkeys = KeyboardModel.lasttablerightlayout();
       $scope.defaultchakrakeys = KeyboardModel.swarachakrakeys();
-      console.log($scope.defaultchakrakeys);
     });
     $scope.displaychakra = function(keycode, unicode, event) {
       angular.element("#chakra").css("left", event.screenX - 70).css("top", event.screenY - 180).css("display", "block");

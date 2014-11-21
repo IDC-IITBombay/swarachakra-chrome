@@ -1,10 +1,10 @@
 <div
   ng-controller="KeyboardController"
-  id="keyboard"
+  id="swarachakra_keyboard"
   ng-init="frame2 = false; frame1 = true">
 <!-- The Keyboard Container -->
-  <div id="keyboardcontainer">
-    <div class="header" ng-click="toggledisplayofkeyboard = !toggledisplayofkeyboard">
+  <div id="swarachakra_keyboardcontainer">
+    <div class="swarachakra_header" ng-click="toggledisplayofkeyboard = !toggledisplayofkeyboard">
       <strong class="languagename">Language: <span>{{ currentlanguagename }}</span></strong>
       <div class="toggler">
         <span>-</span>
@@ -12,7 +12,7 @@
     </div>
     <div ng-show="toggledisplayofkeyboard">
       <!-- First Column should be here. 1x5-->
-      <div class="firstcolumn frame1">
+      <div class="swarachakra_firstcolumn frame1">
         <table>
           <thead></thead>
           <tbody>
@@ -25,7 +25,7 @@
         </table>
       </div>
       <!-- First 5x5 table for the Swarachakra keys. 5x5-->
-      <div class="maintable1 frame1" ng-show="frame1">
+      <div class="swarachakra_maintable1 frame1" ng-show="frame1">
         <table>
           <thead></thead>
           <tbody>
@@ -38,7 +38,7 @@
         </table>
       </div>
       <!-- Second 5x5 table for the Swarachakra keys. 5x5-->
-      <div class="maintable2 frame1" ng-show="frame1">
+      <div class="swarachakra_maintable2 frame1" ng-show="frame1">
         <table>
           <thead></thead>
           <tbody>
@@ -52,7 +52,7 @@
       </div>
 
       <!-- Third 5x5 table for the Swarachakra keys. 5x5, opens on shift selection-->
-      <div class="maintable1 frame2" ng-show="frame2">
+      <div class="swarachakra_maintable1 frame2" ng-show="frame2">
         <table>
           <thead></thead>
           <tbody>
@@ -80,7 +80,7 @@
         </table>
       </div>
       <!-- Third 5x5 table for the Swarachakra keys. 5x5, opens on shift selection-->
-      <div class="maintable2 frame2" ng-show="frame2">
+      <div class="swarachakra_maintable2 frame2" ng-show="frame2">
         <table>
           <thead></thead>
           <tbody>
@@ -108,7 +108,7 @@
         </table>
       </div>
       <!-- Last Column should be here. 1x5 -->
-      <div class="lastcolumn frame1">
+      <div class="swarachakra_lastcolumn frame1">
         <table>
           <thead></thead>
           <tbody>
@@ -126,7 +126,7 @@
         </table>
       </div>
       <!-- Last row should be here.5x1 -->
-      <div class="lastrow">
+      <div class="swarachakra_lastrow">
         <table>
           <thead></thead>
           <tbody>
@@ -144,13 +144,13 @@
               <td data-code="{{ lastrowleftkeys.code }}" data-chakra="{{ lastrowleftkeys.chakra }}" ng-click="sharetext(lastrowleftkeys.label)">
                 <span>{{ lastrowleftkeys.label }}</span>
               </td>
-              <td id="spacebar" ng-click="sharetext(' ')" data-code="56" data-chakra="0">
+              <td id="swarachakra_spacebar" ng-click="sharetext(' ')" data-code="56" data-chakra="0">
                 <span></span>
               </td>
               <td ng-repeat="row in lastrowrightkeys" ng-click="sharetext(row.label)" data-code="{{ row.code }}" data-chakra="{{ row.chakra }}">
                 <span>{{ row.label }}</span>
               </td>
-              <td class="enterkey" data-code="57" data-chakra="57">
+              <td class="swarachakra_enterkey" data-code="57" data-chakra="57">
                 <span>
                   <img src="chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/images/enter.png" alt="En" />
                 </span>
@@ -168,29 +168,8 @@
         </li>
       </ul>
     </div>
-    <!--<div class="options">
-      <strong>Available Languages</strong>
-      <ul>
-        <li>
-          <input type="radio" name="languagetype" value="male">
-          <label for="languagetype">Hindi</label>
-        </li>
-        <li>
-          <input type="radio" name="languagetype" value="male">
-          <label for="languagetype">Telagu</label>
-        </li>
-        <li>
-          <input type="radio" name="languagetype" value="male">
-          <label for="languagetype">Malayalam</label>
-        </li>
-      </ul>
-      <button class="btn-primary btn languageswitch" ng-click="switch(language.id)">
-        <i class="fa fa-refresh"></i><span>Refresh</span>
-      </button>
-    </div>
-    -->
   </div>
-  <div id="chakra" ng-mouseup="hidechakra()">
+  <div id="swarachakra_chakra" ng-mouseup="hidechakra()">
       <ul>
         <li class="first">
           <span>{{ defaultchakrakeys[0] }}</span>
@@ -223,7 +202,7 @@
           <span>{{ defaultchakrakeys[9] }}</span>
         </li>
       </ul>
-      <div id="innerchakra">
+      <div id="swarachakra_innerchakra">
         <h6 ng-bind-html="currentkey | unsafeFilter"></h6>
       </div>
     </div>
