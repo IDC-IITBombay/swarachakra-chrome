@@ -143,7 +143,7 @@ app.factory("KeyboardModel", function() {
       }
       return table;
     },
-    maintablelayout1: function(language) {
+    maintablelayout1: function() {
       var i, table;
       i = 0;
       table = [];
@@ -153,7 +153,7 @@ app.factory("KeyboardModel", function() {
       }
       return table;
     },
-    maintablelayout2: function(languages) {
+    maintablelayout2: function() {
       var i, table;
       i = 4;
       table = [];
@@ -163,8 +163,27 @@ app.factory("KeyboardModel", function() {
       }
       return table;
     },
-    maintablelayout3: function(id) {},
-    maintablelayout4: function(language) {},
+    maintablelayout3: function() {
+      var i, table;
+      i = 8;
+      table = [];
+      while (i < 12) {
+        table[i] = this.keys[i];
+        i++;
+      }
+      console.log(table);
+      return table;
+    },
+    maintablelayout4: function() {
+      var i, table;
+      i = 12;
+      table = [];
+      while (i < 16) {
+        table[i] = this.keys[i];
+        i++;
+      }
+      return table;
+    },
     lasttableleftlayout: function(id) {
       var table;
       table = {};

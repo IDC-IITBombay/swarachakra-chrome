@@ -618,7 +618,7 @@
     },
     {
       "code": "47",
-      "label": "'",
+      "label": "\\'",
       "showchakra": false,
       "showcustomchakra": false,
       "customchakralayout": [
@@ -697,6 +697,695 @@
     {
       "code": "53",
       "label": "\u0C9F\u0CCD\u0CB0",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "54",
+      "label": ".",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "55",
+      "label": "\u0970",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "56",
+      "label": "1",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "57",
+      "label": "2",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "58",
+      "label": "3",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "59",
+      "label": "\u002B",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "60",
+      "label": ",",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "61",
+      "label": "\u0965",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "62",
+      "label": "4",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "63",
+      "label": "5",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "64",
+      "label": "6",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "65",
+      "label": "\u002D",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "66",
+      "label": ";",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "67",
+      "label": "_",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "68",
+      "label": "7",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "69",
+      "label": "8",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "70",
+      "label": "9",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "71",
+      "label": "x",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "72",
+      "label": "=",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "73",
+      "label": ":",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "74",
+      "label": "\u2014",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "75",
+      "label": "*",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "76",
+      "label": "0",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "77",
+      "label": "#",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "78",
+      "label": "\u00F7",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "79",
+      "label": "|",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "80",
+      "label": "\u20B9",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "81",
+      "label": "$",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "82",
+      "label": "%",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "83",
+      "label": "\u2122",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "84",
+      "label": "\u00A9",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "85",
+      "label": "/",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "86",
+      "label": "\\\\",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "87",
+      "label": "@",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "88",
+      "label": "&",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "89",
+      "label": "\u0950",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "90",
+      "label": "\u00AE",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "91",
+      "label": "~",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "92",
+      "label": "<",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "93",
+      "label": ">",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "94",
+      "label": "^",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "95",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "96",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "97",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "98",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "99",
+      "label": "(",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "100",
+      "label": ")",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "101",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "102",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "103",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "104",
+      "label": null,
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "105",
+      "label": "{",
+      "showchakra": false,
+      "showcustomchakra": false,
+      "customchakralayout": [
+
+      ],
+      "showicon": false,
+      "icon": "",
+      "changelayout": false,
+      "layout": ""
+    },
+    {
+      "code": "106",
+      "label": "}",
       "showchakra": false,
       "showcustomchakra": false,
       "customchakralayout": [
