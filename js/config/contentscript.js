@@ -69,7 +69,7 @@ app.controller("KeyboardController", [
   "$scope", "$http", "LanguageModel", "KeyboardModel", "$sce", function($scope, $http, LanguageModel, KeyboardModel, $sce) {
     var languageResource;
     languageResource = $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json');
-    angular.element("#chakra").css("display", "none");
+    angular.element("#swarachakra_chakra").css("display", "none");
     languageResource.success(function(languageobject) {
       LanguageModel.addAll(languageobject);
       $scope.currentlanguage = languageobject;
