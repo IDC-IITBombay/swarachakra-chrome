@@ -88,7 +88,24 @@
   height: 18px;
 }
 
-#swarachakra_chakra svg g:hover,
-#swarachakra_chakra svg g path:hover {
-  fill:#333333;
+#swarachakra_chakra {
+  width:220px;
+  height:220px;
+  position: absolute;
+  z-index: 100000000000; /* Override possibly everything when called */
+}
+
+#swarachakra_chakra g {
+  fill:#010b0d;
+}
+
+#swarachakra_chakra g:hover {
+  fill:#05252b;
+  cursor:pointer;
+}
+
+
+#swarachakra_chakra g text {
+  font-size: 24px;
+  fill:#efefef;
 }

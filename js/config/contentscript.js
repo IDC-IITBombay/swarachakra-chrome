@@ -87,12 +87,12 @@ app.controller("KeyboardController", [
       $scope.defaultchakrakeys = KeyboardModel.swarachakrakeys();
     });
     $scope.displaychakra = function(keycode, unicode, event) {
-      angular.element("#chakra").css("left", event.screenX - 70).css("top", event.screenY - 180).css("display", "block");
-      angular.element("#innerchakra").css("position", "absolute");
+      angular.element("#swarachakra_chakra").css("left", event.screenX - 100).css("top", event.screenY - 180).css("display", "block");
+      angular.element("#swarachakra_innerchakra").css("position", "absolute");
       $scope.currentkey = unicode;
     };
     $scope.hidechakra = function() {
-      angular.element("#chakra").css("display", "none");
+      angular.element("#swarachakra_chakra").css("display", "none");
     };
     $scope.shifttable = function() {
       $scope.frame1 = !$scope.frame1;
