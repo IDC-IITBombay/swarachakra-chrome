@@ -30,7 +30,14 @@
           <thead></thead>
           <tbody>
             <tr ng-repeat="data in firstmaintablekeys">
-              <td ng-repeat="row in data" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in data"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
@@ -43,7 +50,14 @@
           <thead></thead>
           <tbody>
             <tr ng-repeat="data2 in secondmaintablekeys track by $index">
-              <td ng-repeat="row2 in data2" data-code="{{ row2.code }}" data-chakra="{{ row2.showchakra }}" ng-click="displaychakra(row2.code, row2.label, $event, row2.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row2.label)">
+              <td
+                ng-repeat="row2 in data2"
+                data-code="{{ row2.code }}"
+                data-chakra="{{ row2.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row2.code, row2.label, $event, row2.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row2.label)">
                 <span ng-bind-html="row2.label | unsafeFilter"></span>
               </td>
             </tr>
@@ -57,22 +71,50 @@
           <thead></thead>
           <tbody>
             <tr>
-              <td ng-repeat="row in onscreen[8]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td 
+                ng-repeat="row in onscreen[7]" 
+                data-code="{{ row.code }}" 
+                data-chakra="{{ row.showchakra }}" 
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" 
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
-              <td ng-repeat="row in onscreen[8]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[8]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
-              <td ng-repeat="row in onscreen[9]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[9]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
-              <td ng-repeat="row in onscreen[10]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[10]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
@@ -85,22 +127,49 @@
           <thead></thead>
           <tbody>
             <tr>
-              <td ng-repeat="row in onscreen[11]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[11]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
-              <td ng-repeat="row in onscreen[12]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[12]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
-              <td ng-repeat="row in onscreen[13]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[13]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()"
+                ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
-              <td ng-repeat="row in onscreen[14]" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}" ng-click="displaychakra(row.code, row.label, $event, row.showchakra)" ng-click="hidechakra()" ng-click="sharetext(row.label)">
+              <td
+                ng-repeat="row in onscreen[14]"
+                data-code="{{ row.code }}"
+                data-chakra="{{ row.showchakra }}"
+                data-customchakra="{{ row.customchakra }}"
+                ng-click="displaychakra(row.code, row.label, $event, row.showchakra)"
+                ng-click="hidechakra()" ng-click="sharetext(row.label)">
                 <span ng-bind-html="row.label | unsafeFilter"></span>
               </td>
             </tr>
@@ -141,13 +210,22 @@
                   <strong>LS</strong> <!-- Need Better Icons for switching Languages -->
                 </span>
               </td>
-              <td data-code="{{ lastrowleftkeys.code }}" data-chakra="{{ lastrowleftkeys.showchakra }}" ng-click="sharetext(lastrowleftkeys.label)">
+              <td
+                data-code="{{ lastrowleftkeys.code }}"
+                data-chakra="{{ lastrowleftkeys.showchakra }}"
+                data-customchakra="{{ lastrowleftkeys.customchakra }}"
+                ng-click="sharetext(lastrowleftkeys.label)">
                 <span>{{ lastrowleftkeys.label }}</span>
               </td>
               <td id="swarachakra_spacebar" ng-click="sharetext(' ')" data-code="56" data-chakra="0">
                 <span></span>
               </td>
-              <td ng-repeat="row in lastrowrightkeys" ng-click="sharetext(row.label)" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}">
+              <td
+                ng-repeat="row in lastrowrightkeys"
+                ng-click="sharetext(row.label)"
+                data-code="{{ row.code }}"
+                data-customchakra="{{ row.customchakra }}"
+                data-chakra="{{ row.showchakra }}">
                 <span>{{ row.label }}</span>
               </td>
               <td class="swarachakra_enterkey" data-code="57" data-chakra="57">
