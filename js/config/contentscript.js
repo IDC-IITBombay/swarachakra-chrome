@@ -317,7 +317,7 @@ app.factory("SaveModel", [
         i = 0;
         while (i < keys.length) {
           textinput = this.queue[keys[i]];
-          requests.push(textinput.put().then(this.noteUpdateRequest.bind(null, textinput)));
+          requests.push(textinput.put().then(this.inputUpdateRequest.bind(null, textinput)));
           i++;
         }
         this.queue = {};
@@ -326,8 +326,8 @@ app.factory("SaveModel", [
           self.flush();
         });
       },
-      noteUpdateRequest: function(note, response) {
-        note = response;
+      inputUpdateRequest: function(input, response) {
+        input = response;
       }
     };
     return new SaveModel();
