@@ -87,8 +87,13 @@ app.controller("KeyboardController", [
       $scope.lastrowrightkeys = KeyboardModel.lasttablerightlayout();
       $scope.defaultchakrakeys = KeyboardModel.swarachakrakeys();
     });
-    $scope.displaychakra = function(keycode, label, event,chakra) {
-      if (chakra == true) {
+    $scope.displaychakra = function(code, label, event, chakra, customchakra) {
+      if (chakra == true && customchakra == false) {
+        angular.element("#swarachakra_chakra").css("left", event.screenX - 100).css("top", event.screenY - 180).css("display", "block");
+        angular.element("#swarachakra_innerchakra").css("position", "absolute");
+      } else if (chakra == true || customchakra == true) {
+        $scope.customchakrakeys = KeyboardModel.customchakrakeys(code)
+        $scope.defaultchakrakeys = $scope.customchakrakeys;
         angular.element("#swarachakra_chakra").css("left", event.screenX - 100).css("top", event.screenY - 180).css("display", "block");
         angular.element("#swarachakra_innerchakra").css("position", "absolute");
       }
@@ -222,6 +227,21 @@ app.factory("KeyboardModel", function() {
     },
     swarachakrakeys: function() {
       var chakrakeys = this.chakrakeys.split(" ");
+      return chakrakeys;
+    },
+    customchakrakeys: function(code) {
+      console.log(code);
+      var i, chakrakeys;
+      i=1;
+      while(i < this.languageobject.csv.length) {
+        if (i == code) {
+          chakrakeys = this.languageobject.csv[i-1].customchakralayout;
+          console.log(this.languageobject.csv[i-1]);
+          break;
+        } else {
+          i++;
+        }
+      }
       return chakrakeys;
     }
   };
