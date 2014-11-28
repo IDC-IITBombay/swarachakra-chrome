@@ -1,0 +1,31 @@
+/* All the variables are declared here */
+/* The keyboard colors, fonts, basic positioning. */
+
+// Keyboard colors
+
+$swarachakra-header: #333;
+$swarachakra-header-hover: #333;
+
+$swarachakra-body: #eee;
+$swarachakra-body-hover: #eee;
+
+$swarachakra-button: #010b0d;
+$swarachakra-button-hover: #05252b;
+
+$swarachakra-chakra-path: #010b0d;
+$swarachakra-chakra-path-hover: #05252b;
+
+$swarachakra-chakra-ellipse: #05252b;
+$swarachakra-chakra-path-ellipse: #05252b;
+
+// positioning and z indexes.
+
+$z-index-low: 10;
+$z-index-high: 1000;
+$z-index-monumental: 1000000;
+
+// fonts
+
+$font-size-default: 20px;
+$font-size-chakra: 24px;
+$font-stack: "Open Sans", Helvetica, sans-serif;

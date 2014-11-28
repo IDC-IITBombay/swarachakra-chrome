@@ -1,0 +1,144 @@
+
+#swarachakra_keyboardcontainer {
+  max-width: 564px;
+  min-width: 564px;
+  max-height: 600px;
+  position: fixed;
+  bottom: 0px;
+  left: 100px;
+  right: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #eee;
+  z-index: 1000000;
+  font-family: $font-stack;
+  .swarachakra_header {
+    float: left;
+    width: 97.2%;
+    /*TODO: WTF? */
+    height: 20px;
+    vertical-align: middle;
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #03181c;
+    color: #fefefe;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    .toggler {
+      float: right;
+      margin-right: 15px;
+    }
+  }
+  .swarachakra_firstcolumn {
+    margin-left: 2px;
+  }
+  .swarachakra_lastcolumn, .swarachakra_firstcolumn {
+    width: 48px;
+  }
+  .swarachakra_maintable1, .swarachakra_maintable2 {
+    width: 232px;
+  }
+  .swarachakra_maintable1, .swarachakra_maintable2 {
+    margin-left: 1px;
+  }
+}
+
+#vkeyboardcontainer .swarachakra_lastcolumn {
+  margin-left: 1px;
+}
+
+#swarachakra_keyboardcontainer {
+  .swarachakra_firstcolumn {
+    margin-left: 1px;
+  }
+  .swarachakra_maintable1 table,
+  .swarachakra_maintable2 table,
+  .swarachakra_lastcolumn table,
+  .swarachakra_firstcolumn
+  table {
+    border-spacing: 5px;
+  }
+  .swarachakra_maintable1,
+  .swarachakra_maintable2,
+  .swarachakra_lastcolumn,
+  .swarachakra_firstcolumn,
+  .swarachakra_lastrow
+  {
+    float: left;
+  }
+  .swarachakra_maintable1 table,
+  .swarachakra_maintable2 table,
+  .swarachakra_lastcolumn table,
+  .swarachakra_firstcolumn table,
+  .swarachakra_lastrow table {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .swarachakra_maintable1 table tbody tr td,
+  .swarachakra_maintable2 table tbody tr td,
+  .swarachakra_lastcolumn table tbody tr td, 
+
+  swarachakra_firstcolumn table tbody tr td,
+  .swarachakra_lastrow table tbody tr td {
+    width: 46px !important;
+    height: 50px !important;
+    text-align: center;
+    border-radius: 5px;
+    color: #efefef;
+    background: #010b0d;
+  }
+  .swarachakra_maintable1 table tbody tr td:hover,
+  .swarachakra_maintable2 table tbody tr td:hover,
+  .swarachakra_lastcolumn table tbody tr td:hover,
+  .swarachakra_firstcolumn table tbody tr td:hover,
+  .swarachakra_lastrow table tbody tr td:hover {
+    background: #05252b;
+    cursor: pointer;
+  }
+  .swarachakra_maintable1 table tbody tr td span,
+  .swarachakra_maintable2 table tbody tr td span,
+  .swarachakra_lastcolumn table tbody tr td span,
+  .swarachakra_firstcolumn table tbody tr td span,
+  .swarachakra_lastrow table tbody tr td span {
+    z-index: 10;
+    font-size: $font-size-default;
+  }
+  .swarachakra_lastrow {
+    table tbody tr:nth-child(2n) {
+      background: #eee;
+    }
+    margin-top: -5px;
+    float: left;
+    margin-left: 1px;
+    #swarachakra_spacebar {
+      width: 240px !important;
+    }
+  }
+  table {
+    display: inline-block;
+  }
+  .swarachakra_enterkey span img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+#swarachakra_chakra {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  z-index: 100000000000;
+  /* Override possibly everything when called */
+  g {
+    fill: 
+    ;
+    &:hover {
+      fill: #05252b;
+      cursor: pointer;
+    }
+    text {
+      font-size: $font-size-chakra;
+      fill: #efefef;
+    }
+  }
+}
