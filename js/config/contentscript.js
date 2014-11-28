@@ -66,8 +66,9 @@ app.controller("AppController", [
 ]);
 
 app.controller("KeyboardController", [
-  "$scope", "$http", "LanguageModel", "KeyboardModel", "$sce", function($scope, $http, LanguageModel, KeyboardModel, $sce) {
+  "$scope", "$http", "LanguageModel", "KeyboardModel", "SaveModel","$sce", function($scope, $http, LanguageModel, KeyboardModel, SaveModel,$sce) {
     var languageResource;
+    $scope.recordedtext = "";
     languageResource = $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json');
     angular.element("#swarachakra_chakra").css("display", "none");
     languageResource.success(function(languageobject) {
@@ -97,7 +98,13 @@ app.controller("KeyboardController", [
     $scope.shifttable = function() {
       $scope.frame1 = !$scope.frame1;
     };
-    $scope.sharetext = function() {};
+    $scope.sharetext = function(typer) {
+      $scope.recordedtext += typer;
+      console.log($scope.recordedtext);
+    };
+    $scope.delete = function () {
+      $scope.recordedtext.substr(0, $scope.recordedtext.length-1);
+    };
   }
 ]);
 
