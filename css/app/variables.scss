@@ -3,8 +3,11 @@
 
 // Keyboard colors
 
-$swarachakra-header: #333;
-$swarachakra-header-hover: #333;
+$white: #FFFFFF;
+$black: #000000;
+
+$swarachakra-header: #03181c;
+$swarachakra-header-hover: #03181c;
 
 $swarachakra-body: #eee;
 $swarachakra-body-hover: #eee;
@@ -21,8 +24,9 @@ $swarachakra-chakra-path-ellipse: #05252b;
 // positioning and z indexes.
 
 $z-index-low: 10;
-$z-index-high: 1000;
-$z-index-monumental: 1000000;
+$z-index-high: 1000000;
+$z-index-monumental: 100000000000;
+$fives: 5px;
 
 // fonts
 

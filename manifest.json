@@ -31,7 +31,7 @@
       ],
       "css" : [
         "3rdparty/fontawesome/css/font-awesome.css",
-        "css/public/app.css"
+        "css/public/keyboard.css"
       ],
       "run_at" : "document_end",
       "all_frames" : false
