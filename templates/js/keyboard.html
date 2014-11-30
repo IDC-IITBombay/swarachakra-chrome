@@ -4,7 +4,7 @@
   ng-init="frame2 = false; frame1 = true">
 <!-- The Keyboard Container -->
   <div id="swarachakra_keyboardcontainer">
-    <div class="swarachakra_header" ng-click="toggledisplayofkeyboard = !toggledisplayofkeyboard">
+    <div class="swarachakra_header" ng-click="toggledisplayofkeyboard = !toggledisplayofkeyboard; hidechakra()">
       <strong class="languagename">Language: <span>{{ currentlanguagename }}</span></strong>
       <div class="toggler">
         <span>-</span>
@@ -18,7 +18,7 @@
           <tbody>
             <tr ng-repeat="row in firsttablekeys">
               <td ng-click="sharetext(row.label)" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}">
-                <span>{{ row.label }}</span>
+                <span>{{ row.code }}</span>
               </td>
             </tr>
           </tbody>
@@ -79,7 +79,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)" 
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
@@ -90,7 +90,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
@@ -102,7 +102,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
           </tbody>
@@ -135,7 +135,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
@@ -147,7 +147,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
@@ -159,7 +159,7 @@
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()"
                 ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
             <tr>
@@ -170,7 +170,7 @@
                 data-customchakra="{{ row.showshowcustomchakra }}"
                 ng-click="displaychakra(row.code, row.label, $event, row.showchakra, row.showcustomchakra)"
                 ng-click="hidechakra()" ng-click="sharetext(row.label)">
-                <span ng-bind-html="row.label | unsafeFilter"></span>
+                <span ng-bind-html="row.code | unsafeFilter"></span>
               </td>
             </tr>
           </tbody>
@@ -188,7 +188,7 @@
             </tr>
             <tr ng-repeat="row in lasttablekeys">
               <td ng-click="sharetext(row.label)" data-code="{{ row.code }}" data-chakra="{{ row.showchakra }}">
-                <span>{{ row.label }}</span>
+                <span>{{ row.code }}</span>
               </td>
             </tr>
           </tbody>
@@ -215,7 +215,7 @@
                 data-chakra="{{ lastrowleftkeys.showchakra }}"
                 data-customchakra="{{ lastrowleftkeys.showcustomchakra }}"
                 ng-click="sharetext(lastrowleftkeys.label)">
-                <span>{{ lastrowleftkeys.label }}</span>
+                <span>{{ lastrowleftkeys.code }}</span>
               </td>
               <td id="swarachakra_spacebar" ng-click="sharetext(' ')" data-code="56" data-chakra="0">
                 <span></span>
@@ -226,7 +226,7 @@
                 data-code="{{ row.code }}"
                 data-customchakra="{{ row.showcustomchakra }}"
                 data-chakra="{{ row.showchakra }}">
-                <span>{{ row.label }}</span>
+                <span>{{ row.code }}</span>
               </td>
               <td class="swarachakra_enterkey" data-code="57" data-chakra="57">
                 <span>
@@ -237,14 +237,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div ng-show="languageswitcher">
-      <ul>
-        <li ng-repeat="onelanguage in languagelist">
-          <input type="radio" />
-          <span>{{ onelanguage }}</span>
-        </li>
-      </ul>
     </div>
   </div>
   <svg id="swarachakra_chakra" ng-click="hidechakra()" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve">

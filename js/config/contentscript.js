@@ -15,11 +15,13 @@ $(document).ready(function() {
   }).focus( function() {
     if (!$(this).hasClass('swarachakrainputenabled')) {
       $(this).addClass('swarachakrainputenabled'); // Adds the swarachakra Class on focus.
+      if ($('.swarachakrasurrownder')[0]) {
+        return;
+      }
       $('body').append("<div class='swarachakrasurrownder'></div>");
       $('.swarachakrasurrownder').load(chrome.extension.getURL("templates/js/keyboard.html"), function () {
         angular.bootstrap('.swarachakrasurrownder', ['Swarachakra']);
       });
-
     }
   }).focusout(function() {
     if ($(this).hasClass('swarachakrainputenabled')) {
@@ -69,7 +71,8 @@ app.controller("KeyboardController", [
   "$scope", "$http", "LanguageModel", "KeyboardModel", "SaveModel","$sce", function($scope, $http, LanguageModel, KeyboardModel, SaveModel,$sce) {
     var languageResource;
     $scope.recordedtext = "";
-    languageResource = $http.get('chrome-extension://phoofmcjgkigjoemlhgiipgpjpkobcae/languages/kannada/kannada.json');
+    languageResource = $http.get(chrome.extension.getURL('languages/kannada/kannada.json'));
+    chrome.extension.getURL('languages/kannada/kannada.json')
     angular.element("#swarachakra_chakra").css("display", "none");
     languageResource.success(function(languageobject) {
       LanguageModel.addAll(languageobject);
@@ -98,7 +101,6 @@ app.controller("KeyboardController", [
         angular.element("#swarachakra_innerchakra").css("position", "absolute");
       }
       $scope.currentkey = label;
-      console.log($scope.currentkey);
     };
     $scope.hidechakra = function() {
       angular.element("#swarachakra_chakra").css("display", "none");
@@ -108,7 +110,6 @@ app.controller("KeyboardController", [
     };
     $scope.sharetext = function(typer) {
       $scope.recordedtext += typer;
-      console.log($scope.recordedtext);
     };
     $scope.delete = function () {
       $scope.recordedtext.substr(0, $scope.recordedtext.length-1);
@@ -186,7 +187,6 @@ app.factory("KeyboardModel", function() {
         table[i] = this.keys[i];
         i++;
       }
-      console.log(table);
       return table;
     },
     maintablelayout4: function() {
@@ -230,13 +230,11 @@ app.factory("KeyboardModel", function() {
       return chakrakeys;
     },
     customchakrakeys: function(code) {
-      console.log(code);
       var i, chakrakeys;
       i=1;
       while(i < this.languageobject.csv.length) {
         if (i == code) {
           chakrakeys = this.languageobject.csv[i-1].customchakralayout;
-          console.log(this.languageobject.csv[i-1]);
           break;
         } else {
           i++;
